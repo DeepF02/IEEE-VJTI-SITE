@@ -1,0 +1,26 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    /* h1 h2 ke vajah se navbar and main top bar mein space aa raha tha. we got rid of that by using the overflow. */
+    overflow: auto;
+    padding: 0 40px;
+    /* background-color: red; */
+    /* border: red 1px solid; */
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; exp purposes only*/
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
