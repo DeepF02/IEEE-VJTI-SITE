@@ -1,9 +1,11 @@
 .container {
-    max-width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     /* h1 h2 ke vajah se navbar and main top bar mein space aa raha tha. we got rid of that by using the overflow. */
     overflow: auto;
     padding: 0 40px;
+    
+    
     /* background-color: red; */
     /* border: red 1px solid; */
 }
