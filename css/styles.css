@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /* font-family: 'Roboto', sans-serif; */
 
 * {
   margin: 0px;
   padding: 0px;
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -14,49 +15,104 @@
   --primary-color: #152238;
   --primary-bg-color: #fff;
   --secondary-bg-color: #eef1f2;
+
+  --ieee_cyan:#1abc9e;
+  --ieee_blue:#386cb5; 
+  --ieee_red:#e74c3c;
+   --ieee_yellow:#f1c40f;
+  --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
 }
 
-.navbar img {
-  width: 100px;
-  height: 50px;
-}
+
+/* NAVBAR */
+
 
 .navbar {
   background-color: black;
   color: #fff;
   height: 70px;
+  width:100%;
+  z-index:9999;
+  position:fixed;
+  /* max-width: 1100px; */
+    margin: 0 auto;
+    /* h1 h2 ke vajah se navbar and main top bar mein space aa raha tha. we got rid of that by using the overflow. */
+    overflow: auto;
+    /* padding: 0 40px; */
+    }
+
+    .navbar-shadow {
+      background-color: black;
+      color: #fff;
+      height: 70px;
+      width:100%;
+      z-index:9999;
+      position:fixed;
+      /* max-width: 1100px; */
+        margin: 0 auto;
+        /* h1 h2 ke vajah se navbar and main top bar mein space aa raha tha. we got rid of that by using the overflow. */
+        overflow: auto;
+        /* padding: 0 40px; */
+        box-shadow: 0px 0px 5px 5px #e1e1e1;
+        }
+
+.navbar img, .navbar-shadow img  {
+  width: 100px;
+  height: 50px;
 }
 
-.navbar ul {
+
+
+.navbar ul, .navbar-shadow ul {
   display: flex;
   /* border: 1px black solid; */
 }
 
-.navbar a {
+.navbar a, .navbar-shadow a {
   color: #fff;
   padding: 10px;
   /* border: 1px white solid; */
   margin: 0 5px;
 }
 
-.navbar a:hover {
+.navbar a:hover, .navbar-shadow a:hover  {
   border-bottom: 2px #fff solid;
 }
 
-.navbar .flex {
+.navbar .flex, .navbar-shadow .flex {
   /* if flex is in the navbar, toh yeh flex selectively navbar par hi kaam karega :) */
   /* neeche ke dono already APNE MAIN FLEX CLASS MEIN HAI, TOH KUCH IDHAR INLCUDE KARE NA KARE KUCH FARAK NAHI PADTA, BUT YEAH OVERRIDE KAR SAKTE HAI IDHAR SELECTIVELY NAVBAR KO */
   /* display: flex; */
   /* align-items: center; */
   justify-content: space-between;
 }
-.navbar .container {
+/* .navbar .container {
   max-width: 100%;
+  width:100%;
+  z-index: 99999;
+  position:fixed;
+  
+  
+} */
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Lato", sans-serif;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 ul {
@@ -68,11 +124,16 @@ a {
   color: #333;
 }
 
-.showcase {
+/* SHOWCASE */
+
+.showcase .container {
   /* height: 400px; */
   /* background-color: var(--primary-color); */
   /* color: #fff; */
   position: relative;
+  padding-top:3em;
+  
+  
   /* border: 1px black solid; */
 }
 
@@ -85,6 +146,7 @@ a {
   /* border: 1px red solid; */
   padding: 10px auto;
   margin-left: 100px;
+ 
 }
 
 .showcase .grid {
@@ -93,12 +155,11 @@ a {
   gap: 20px;
 }
 
-
 .showcase::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 115px;
-  bottom: -70px;
+  bottom: 28px;
   right: 0;
   left: 0;
   background: #fff;
@@ -108,54 +169,52 @@ a {
   -ms-transform: skewY(-3deg);
 }
 
-.about{
-    
-    background: var(--secondary-bg-color);
+/* ABOUT */
+
+.about {
+  background: var(--secondary-bg-color);
 }
 
-.about .container{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+.about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about h1 {
-    margin-top: 2.5em;
-    font-size: 3em;
-    color: var(--primary-color);
-    /* font-weight: 400; */
-    /* font-style: bold; */
+  margin-top: 2.5em;
+  font-size: 3em;
+  color: var(--primary-color);
+  /* font-weight: 400; */
+  /* font-style: bold; */
 }
 
-
 .about .img_icon {
-  margin-top:3em;
+  margin-top: 3em;
   width: 50px;
   height: 50px;
   margin-top: 10px;
   border-radius: 10px;
 }
 
-.about p{
-    margin: 2em auto;
-    margin-bottom: 3em ;
-    text-align: justify;
-    line-height: 1.5em;
+.about p {
+  margin: 2em auto;
+  margin-bottom: 3em;
+  text-align: justify;
+  line-height: 1.5em;
 }
 
+/* EVENTS */
 
-.events .container{
+.events .container {
   position: relative;
-border:1px red solid;
-/* max-width: 80%; */
+  /* border:1px red solid; */
+  /* max-width: 80%; */
 }
 
-.events .grid{
-  gap:30px;
-  z-index:1;
-  
+.events .grid {
+  gap: 30px;
+  z-index: 1;
 }
 
 .events h1 {
@@ -164,9 +223,144 @@ border:1px red solid;
   color: var(--primary-color);
 }
 
-.events svg{
+.events svg {
   position: relative;
-z-index: -5;
-/* top: -105px; */
-bottom:260px;
+  z-index: -5;
+  /* top: -105px; */
+  bottom: 340px;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.events .images-anim {
+  position: relative;
+  width: 390px;
+  height: 390px;
+  float: center;
+  margin-left: 2.4em;
+  overflow: auto;
+  border-radius: 10px;
+  /* border: 1px blue solid; */
+  animation-name: bganimation;
+  animation-direction: alternate-reverse;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 10px var(--primary-color) solid;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: transform 0.2s ease-in;
+}
+
+.events .images-anim:hover{
+  transform: translateY(-5px);
+}
+
+
+/* IEEE HELP */
+
+
+.ieee_help{
+  position: relative;
+  /* top:-90px; */
+  bottom:260px;
+   
+   /* bottom:15em; */
+}
+
+.ieee_help h1{
+  font-size: 2em;
+}
+
+.ieee_help p{
+  text-align: justify;
+  margin-top: 1em;
+}
+
+.ieee_help .grid{
+align-items: start;
+gap:3em;
+
+}
+
+/* DOMAINS */
+
+
+
+.tech_heading .cyan {
+  border-top: 3px solid var(--cyan);
+}
+.tech_heading .blue {
+  border-top: 3px solid var(--blue);
+}.tech_heading .red {
+  border-top: 3px solid var(--red);
+}.tech_heading .yellow {
+  border-top: 3px solid var(--orange);
+}
+
+.tech_heading h1{
+  margin-top:-100px;
+  font-size:3em;
+  color:var(--primary-color);
+
+}
+
+.tech_heading .subheading{
+  margin-bottom: 15px;
+}
+
+.tech_heading .box p {
+  color: var(--grayishBlue);
+}
+
+.tech_heading .box {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 20px; 
+  
+  
+}
+
+.tech_heading img {
+  float: right;
+}
+
+.tech_heading .electric_vehicles,
+.tech_heading .biotech,
+.tech_heading .os{
+  margin-bottom:100px;
+}
+
+/* Horizontal Rule Line */
+
+hr.style1 {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+/* Animations for Images */
+
+@keyframes bganimation {
+  0% {
+    background-image: url("https://lh3.googleusercontent.com/VJfo1FOy4dF8XOHeHfo8z3y-ccJ5E8YdSC7U9SWPy61fzlJGT6lkumpaGpETMJ2Ewd78GhNhlOAwgDtXVrFa--rHSSHDxhaNo5Lqun-MUKCJv_K_ANvoMOK5HuCGvE4ICnp7_k4tTow9IBw3A-KVPlIyQstYYxhBqav4YMjc9YADsl0_iV_kZHv-6tQdGfSZQJX5NyRp8WL3tTybqQmYcsSjtbBl2QeFHcMEOIGZFnx0zN7I7yENh4c6opLDNY1hedrJ34x6WboJd6540LzE3BgkLhtvxmzcCjyDs8zRJg3pUaKk8cJH6BNHw0ntrnGPvuxM0GAg6XUaAVI1wU3C_76axMwZl6bigUBzyy6Rt2fY3jA03Evxcfnj7bb2G14a6wuf9ie_w1YEmA7Ft0SWh2o7E23N68Toup0WTipp_jqknCjQDCXHK-TkUl-gx13YRxSepG-h-WhgpwD9DJhUHOe4CaH2HxnjEi1SQw84CB73Kn9qZhZ7ommKe0FhRA1RpTDcwFjZAcNpjtFuCmbL_t2R1THWu-rw5e8RBO90rZAqdSE73HnewLf65-sp_BLQhhtMJ7-2YiRIMJsukj2W0F91SoSt1aMt3hZZDVRXrF8Eva8YO2XP_Yx1fvuEYq0aKiXdyfimNx1rtpD0SXrp4AIArwEJ3jLLSUdP2PFFraPB3IE3Q5Hg5Q-WJmeyORO_rJ6rYtU-k5uqCxl_2NjrLiqNhQ=s400-no?authuser=0");
+  }
+  25% {
+    background-image: url("https://lh3.googleusercontent.com/-aXQdNGf9Oqm-AFG8OVqhbDI0Iqosd1-ssKPcBegrYkHmIP0Qso1hlkJ7VUmeLz4auhu0gOQb5LLaQd_XNf6DUX11rTXOtJl1kbX5d-lDoTK8bkPlENNvnRObYz8MKMaEL9SPQROP6R69bSYS8eDuItBQYgW-5msY-4UaSjTPdwS6SmNfw9lx4nZBaL2aPcemI8k-reDdNka6Sz9NSlOiI3kPfj3aw_DJlMRtLoY3fv8SmeHXkP6xFUzkUWUiecD0Lp3-0C1gARZqI0CW1oTYVkGyXoUMaxPzjr5KrcS6mND8qRrOh-_Ltvpfswmyo54Gaox-DfusZmKZ2H69TlJjgJ-axnB27uD1qfcfcmRIdAYpN9hoJPVlGyZJJPqtR5KL-cf_PCM6ZGBKcZblPTWXEEmFJdBLX43se_e4X3e-nnNQn-gmZ9EWI8uYstIai8BdWVCBAeWtOifMV7Ug_LB5W8V9iwNVC3Z_g99otQuWECcCisT3C3qZ-sUOBN95uo16qTnyP5j6PSlZfVxIMGZBTM5STCDo8Kgr23LzJ6pxMGOpvS8nc0UGWzIczTHJM5DzR4i7q6TUGsLisAdddk7WC4R3sHt8sHMUDVWEy4hHMocnlmz7GOH-eW1meTbEi9HcNJNXS9ySz7M6xzULQiz-bsWU7zR_NPS6HS7Czaei_nKQiMEMP_gYZ3sYI7pXVSzcnLyd8oUE5vX9wYVziXg_IGDRA=s400-no?authuser=0");
+  }
+  50% {
+    background-image: url("https://lh3.googleusercontent.com/5knibVxUqMALyph7oE3Viu2PhPrTYUaB3xeVMQRLd29fmzFkCRK9t4zFojnWpZLv9eu4gZrGGQ6jsxn7-KTz1njuJzWcn00CVP9qTPoHtFJGRyu17gOJTI_kFaRnhwFMK9q7cFP_6W997TIDA5UVbN_v1WwvQRpJR1EYM-RNsbIdJyWXAZs1t5299oCIt32omxZW4ibWookipKiE6jJME7KDwvS5fjsIPgs2Iiuhv2lOXvXEph23LYKE1AV-qmxbrlYU-8EET4LBlVek4m7rBLiL_9wOE5dljc-10KfNipCE6hKoPSgruNIJv-e5wFyhJt4Okd7Jd7fWMjCSueageV8y5XXEff6VZsixFFlfNpUy3p5Tg7qw_n21v0ids_pa9vawVFeHEPaqvQLnF_e2xUXuZeOyb9GjlaDVfEV64VxnzxgQFtUIFfvIe7FW-iDODd-FeWgw9kaTrslcpLCwGsFpqLYaFUTy2AFD35Swfz03jeZppyDxkOR0j0gWJSyySyw7fMde1JOuOlkGXUiNaSXg-YLtpy9FJvgliJTGbGPlqqw_UMIO4emBjlbMX4Q4GVGK0oA19PyqJzmtx5qfvJQO6dml2Gdar8kpYBKgq0zdHMomWXtJt9mS2M7c7I7-2_WYRrCnYBbkAPcQCBJcCVWWGCckgqekCwDh2SnT1NUog26myzQa_kCK5SWEuFYH1L0vTdJmuclUEyPFdHX3qUYbIQ=s400-no?authuser=0");
+  }
+  75% {
+    background-image: url("https://lh3.googleusercontent.com/mqEhiJDnxVZubZJOCVl8dNEi0xaVClHRPpaWqN8HRcInA85Ky6oCFqEbtGIrAzcjZEU2vK1Efpa9KeQn_lRNP0x5CbaJOnsbKUjzRPLEakfbQJi_J9m9dyUN53ZeKAATS8EFpSSe_MDgTSI5HcjHfiVPuK2pC1Zl8RsPEsSp7z5gnZ_grbIEc56ke0EumH2_2FH2BqqYrb4D5mJayeTOaTzry5ygw5W817fL9pwXsRsAP2pz5gIRRWh97Pov-EhlOZJe9m2PiTflBz1wnYN_0a4vZIw6jEm9hCPhEGaTq3z1oa7axwdszVkDpo3jEGlGbUx_Yc7nLY55hsm9YpFlzxaOJJULhR6UhvN-TLLvIjOvPwSzJh6r5Zv-IqCqzMqi-QGDfA8QNd9P420ZfvhTMrd9z0H2FvgULwqxR7TVEbDpj9BJQxMBAyMMBqu_0F9UGHEHnOfP2sfqyGrCMysGaWJS37tB4vfn5pRNOPTr4s_sGFIaEfbTufJNPKx4oWdnyWclZcsrmQi9EoYay35d6bj-SegOnp0FANKdrh7iRrq8KdGwAKvjIVHEaM7q9n9PDzEimGfaGb4elQTnnH49sTpTmo1yo43EYbBIkfQjw8W38CLuyeOlwMp9wQjkCCI1xH7oxwwkh-RwBWGnE05XMTm1Z4UmoGNWHkwHusjkeEMFt8Iqm---HaRvZ-SoP3tcYQ5aTe0Jvw7pAcsdgiLz7627HQ=s400-no?authuser=0");
+  }
+  100% {
+    background-image: url("https://lh3.googleusercontent.com/DMcCy1MWPH8KlCH0xHEe4on9s6q5VnP1X9f4EyGeaOjxUjDq6Wo6ZO78ATeDNGrBfA0wKxF8fPNeioGjS584T2Hc-7gEl0mGAB_GPKCZ1IF8d9FXxzVf78P1BHsyxs0gn-7aBB4FvtUwMikD6TYgY31K6LOR05BKklgOCHrzcOMj4vc4-3xAhzFpnxdc350eeRwn09njcBenQUGVlJAh5rsK6gqhird6Vtgc_uo4NcdJthwpniX9Rmal6kzwRh-FPVZBexZyvVyuL2W8_YldGWAHUFFxhddZe590ULoK42e_bXtXH16y8K_vAUakBfGcnVZw8Lb6dwTPJjXc9Y0NLUIjKrY_PefkOaTsCZs3obeYYQ9c_Ywf41KRlGdb2YN4LHjM37L4EWwej_mMwVd0LAe0bjAFK9CQ8TbT4Ay0-F-Z2WBDReXAHoLdKLtav3EE5Tcixwj8Om6spfQRKwfhZ9Xx0eFxHZQN72E-1QQOyB9gEsOEaaoiZ0n0fyfhRvP18HXm8NB8qy30jygjrCt42rIyYRMhZf0ZOJ_mqUd2rulIbblOMszMTmXVgfv-5bmP5SlxFlF77-x0Y5iluOSeU5xsKnG3pAHAR9d7e2H3U8xXKGEmfAF5-aHlphxSbne-CcEZhT9UljVt9DfmztjeBwuy6RL1AUF8os9vvm1D-e0qgZXw74-1azD3UofPLz_RuHlteoIMd3e88azj2w11TLX0qQ=s400-no?authuser=0");
+  }
 }
