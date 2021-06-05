@@ -20,16 +20,14 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-
-    <!-- Font Awesome //for the icons -->
+    <!-- Font Awesome // for the icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
     <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>IEEE VJTI</title>
   </head>
@@ -51,15 +49,15 @@
         }
       }
     </script>
+
     <!-- NAVBAR -->
     <div class="navbar" id="navbar">
       <div class="flex">
-        <img src="./images/ieee_logo.png" alt="" class="m-1" />
+        <img src="./images/ieee_logo.png" loading="lazy" alt="IEEE logo" class="m-1" />
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Events</a></li>
-            <!-- <li><a href="#">Blog</a></li> -->
             <li><a href="#">R&D</a></li>
             <li><a href="#">Magazine</a></li>
             <li><a href="#">Membership</a></li>
@@ -75,20 +73,19 @@
       <div class="container grid">
         <div class="showcase-text">
           <h1><span>LEARN.</span></h1>
-          <h1><span>CREATE.</span></h1>
           <h1><span>EXPLORE.</span></h1>
-        </div>
+          <h1><span>CREATE.</span></h1>
+       </div>
 
         <div class="showcase-img">
-          <img src="./images/gadgets.webp" alt="" />
+          <img src="./images/gadgets.webp" alt="Showcase Image" loading="lazy" />
         </div>
       </div>
     </section>
 
     <!-- About Us -->
     <section class="about">
-      <div class="container flex">
-        <!-- <img src="./images/ieee.png" alt="" class="img_icon"> -->
+      <div class="container flex"  data-aos="fade-up" data-aos-duration="1500">
         <h1>About Us</h1>
         <h5>Here's some information about what we do!</h5>
         <p>
@@ -111,15 +108,14 @@
           technological research.
         </p>
       </div>
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#cbedf6" fill-opacity="1" d="M0,256L26.7,250.7C53.3,245,107,235,160,208C213.3,181,267,139,320,133.3C373.3,128,427,160,480,170.7C533.3,181,587,171,640,165.3C693.3,160,747,160,800,181.3C853.3,203,907,245,960,250.7C1013.3,256,1067,224,1120,224C1173.3,224,1227,256,1280,256C1333.3,256,1387,224,1413,208L1440,192L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
-          </svg> -->
     </section>
 
     <!-- Events Pics and Info -->
     <section class="events">
       <div class="container grid py-2">
-        <div class="images-anim box"></div>
+        <div class="images-anim box" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"></div>
         <div>
           <h1>IEEE Events</h1>
           <h5>
@@ -137,51 +133,53 @@
           </div>
         </div>
       </div>
-      <svg
-        height="100%"
-        width="100%"
-        id="svg"
-        viewBox="0 0 1440 400"
-        xmlns="http://www.w3.org/2000/svg"
-        class="transition duration-300 ease-in-out delay-150"
-      >
-        <defs>
-          <linearGradient id="gradient">
-            <stop offset="5%" stop-color="#9900ef88"></stop>
-            <stop offset="95%" stop-color="#32ded488"></stop>
-          </linearGradient>
-        </defs>
-        <path
-          d="M 0,400 C 0,400 0,133 0,133 C 98.28571428571428,108.28571428571428 196.57142857142856,83.57142857142857 330,89 C 463.42857142857144,94.42857142857143 631.9999999999999,130 746,150 C 860.0000000000001,170 919.4285714285716,174.42857142857144 1026,169 C 1132.5714285714284,163.57142857142856 1286.2857142857142,148.28571428571428 1440,133 C 1440,133 1440,400 1440,400 Z"
-          stroke="none"
-          stroke-width="0"
-          fill="url(#gradient)"
-          class="transition-all duration-300 ease-in-out delay-150"
-        ></path>
-        <defs>
-          <linearGradient id="gradient">
-            <stop offset="5%" stop-color="#9900efff"></stop>
-            <stop offset="95%" stop-color="#32ded4ff"></stop>
-          </linearGradient>
-        </defs>
-        <path
-          d="M 0,400 C 0,400 0,266 0,266 C 100.57142857142858,284.2857142857143 201.14285714285717,302.57142857142856 317,312 C 432.85714285714283,321.42857142857144 563.9999999999999,322.00000000000006 691,312 C 818.0000000000001,301.99999999999994 940.8571428571429,281.4285714285714 1065,272 C 1189.142857142857,262.5714285714286 1314.5714285714284,264.28571428571433 1440,266 C 1440,266 1440,400 1440,400 Z"
-          stroke="none"
-          stroke-width="0"
-          fill="url(#gradient)"
-          class="transition-all duration-300 ease-in-out delay-150"
-        ></path>
-      </svg>
+     <!-- SVG Waves -->
+     <svg
+height="100%"
+width="100%"
+id="svg"
+viewBox="0 0 1440 400"
+xmlns="http://www.w3.org/2000/svg"
+class="transition duration-300 ease-in-out delay-150"
+>
+<defs>
+  <linearGradient id="gradient">
+    <stop offset="5%" stop-color="#9900ef88"></stop>
+    <stop offset="95%" stop-color="#32ded488"></stop>
+  </linearGradient>
+</defs>
+<path
+  d="M 0,400 C 0,400 0,133 0,133 C 98.28571428571428,108.28571428571428 196.57142857142856,83.57142857142857 330,89 C 463.42857142857144,94.42857142857143 631.9999999999999,130 746,150 C 860.0000000000001,170 919.4285714285716,174.42857142857144 1026,169 C 1132.5714285714284,163.57142857142856 1286.2857142857142,148.28571428571428 1440,133 C 1440,133 1440,400 1440,400 Z"
+  stroke="none"
+  stroke-width="0"
+  fill="url(#gradient)"
+  class="transition-all duration-300 ease-in-out delay-150"
+></path>
+<defs>
+  <linearGradient id="gradient">
+    <stop offset="5%" stop-color="#9900efff"></stop>
+    <stop offset="95%" stop-color="#32ded4ff"></stop>
+  </linearGradient>
+</defs>
+<path
+  d="M 0,400 C 0,400 0,266 0,266 C 100.57142857142858,284.2857142857143 201.14285714285717,302.57142857142856 317,312 C 432.85714285714283,321.42857142857144 563.9999999999999,322.00000000000006 691,312 C 818.0000000000001,301.99999999999994 940.8571428571429,281.4285714285714 1065,272 C 1189.142857142857,262.5714285714286 1314.5714285714284,264.28571428571433 1440,266 C 1440,266 1440,400 1440,400 Z"
+  stroke="none"
+  stroke-width="0"
+  fill="url(#gradient)"
+  class="transition-all duration-300 ease-in-out delay-150"
+></path>
+</svg>
+
     </section>
 
-    <!-- Domains -->
+    <!-- IEEE HELP -->
 
     <section class="ieee_help">
       <div class="container">
         <h1 class="stats-heading text-center my-1">How can IEEE help you?</h1>
 
-        <div class="grid grid-4 text-center my-4">
-          <div>
+        <div class="grid grid-4 text-center my-4" >
+          <div >
             <i class="far fa-newspaper fa-3x"></i>
             <h3>Newsletters</h3>
             <p class="text-secondary">
@@ -223,7 +221,6 @@
         </div>
       </div>
     </section>
-   
 
     <!-- TECHNOLOGIES/DOMAINS -->
     <section class="tech_heading">
@@ -240,108 +237,218 @@
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          Domains we are excited to collaborate and teach!
+          These are some of the domains that we are passionate about!
         </p>
-    </div>
-        <div class="container grid grid-3">
-          <div class="box cyan ai">
-            <h2>Artificial Intelligence</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box red ml">
-            <h2>Machine Learning</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box yellow iot">
-            <h2>Internet of Things</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box blue computation">
-            <h2>Computation</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box cyan energy">
-            <h2>Renewable Energy</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box red mechatronics">
-            <h2>Mechatronics</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box yellow electric_vehicles">
-            <h2>Electric Vehicles</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box red biotech">
-            <h2>Biotechnology</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
-
-          <div class="box cyan os">
-            <h2>Open Source</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-            <img
-              src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-              alt=""
-            />
-          </div>
+      </div>
+      <div class="container grid grid-3"  >
+        <div class="box cyan ai" data-aos="fade-up"
+        data-aos-duration="1600">
+          <h2>Artificial Intelligence</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/ai.png"
+            alt="AI"
+            loading="lazy"
+          />
         </div>
-     
+
+        <div class="box red ml" data-aos="fade-up"
+        data-aos-duration="1600">
+          <h2>Machine Learning</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/ml.png"
+            alt="ML"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="box yellow iot" data-aos="fade-up"
+        data-aos-duration="1600">
+          <h2>Internet of Things</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/iot.png"
+            alt="IOT"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="box blue computation"  data-aos="fade-up"
+        data-aos-duration="1700">
+          <h2>Computation</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/computation.png"
+            alt="Computation"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="box cyan energy" data-aos="fade-up"
+        data-aos-duration="1700">
+          <h2>Renewable Energy</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/renewable_energy.png"
+            alt="Renewable Energy"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="box red mechatronics" data-aos="fade-up"
+        data-aos-duration="1700">
+          <h2>Mechatronics</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/mechatronics.png"
+            alt="Mechatronics"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="box yellow electric_vehicles" data-aos="fade-up"
+        data-aos-duration="1800">
+          <h2>Electric Vehicles</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/electric_vehicles.png"
+            alt="Electric Vehicles"
+          />
+        </div>
+
+        <div class="box red biotech" data-aos="fade-up"
+        data-aos-duration="1800">
+          <h2>Biotechnology</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/biotech.png"
+            alt="Biotechnology"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="box cyan os" data-aos="fade-up"
+        data-aos-duration="1800">
+          <h2>Open Source</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img
+            src="./images/ieee_tech/oss.png"
+            alt="Open Source"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
 
-    <br>
-    <hr class="style1">
+    <br />
+    <hr class="style1" />
     
+
     <!-- IEEE Weeklies -->
     <section class="ieee_weeklies">
+      <div class="heading text-center"  data-aos="fade-up"
+      data-aos-duration="1500">
+        <h1>IEEE Weeklies!</h1>
+        <p>
+          Catch the very best from the tech world now on the
+          <a href="https://www.instagram.com/ieeevjti/" target="_blank">@ieeevjti</a> page!
+        </p>
+      </div>
 
+      <div class="container grid grid-3" data-aos="zoom-in" data-aos-duration="1600">
+        <div class="weekly1">
+          <div class="card">
+           
+            <a href= "https://www.instagram.com/p/CPTK-GsMiJD/"><img src="./images/ieee_weeklies/ieee_weekly1.png" alt="IEEEWeekly Image" loading="lazy" /></a>
+          </div>
+        </div>
+        <div class="weekly2">
+          <div class="card">
+            <a href="https://www.instagram.com/p/COlPqwiswfz/"> 
+              <img src="./images/ieee_weeklies/ieee_weekly2.png" alt="IEEEWeekly Image" loading="lazy"  /></a>
+           
+          </div>
+        </div>
+        <div class="weekly3">
+          <div class="card"><a href="https://www.instagram.com/p/CPa5pHOM_nN/"> <img src="./images/ieee_weeklies/ieee_weekly3.png" alt="IEEEWeekly Image" loading="lazy"  /></a>
+           
+          </div>
+        </div>
+      </div>
     </section>
+    <hr class="style1">
 
-    <div style="height: 400px"></div>
+
+
+    <!-- VIDEO -->
+    <section class="video">
+      <div class="grid container text-center">
+        <div class="video-container" data-aos="zoom-in-right" data-aos-duration="1600">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K6ursK8vSIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </iframe>
+      </div>
+    <div class="canva_anim">
+    <video style="border-radius: 13px;"
+    playsinline
+    autoplay
+    muted
+    id="bgvideo">
+  <source src="./videos/Fostering_Technological_Innovation.mp4" type="video/mp4" />
+  </video>
+  </div>
+  </div>
+  </section>
+
+    <!-- Footer -->
+    <section class="footer_section bg-footer">
+    <footer class="footer">
+      <div class="container grid grid-3">
+          <div>
+          
+           
+              <h1>IEEE VJTI</h1>
+              <div class="line1"><img src="./images/ieee_smallest.png" alt="IEEE Logo" loading="lazy"  id="ieee_smallest">
+            </div>
+              
+          </div>
+         
+          <div class="info">
+            <h3>
+             <a href="#">
+              Become a Member </a>
+            </h3>
+            <p>Get notified with the latest updates in the technical world, articles, seminars and workshops. </p>
+          </div>
+          <div class="social">
+          
+              <h3 >Connect With Us</h3>
+              <a href="https://www.linkedin.com/company/ieee-vjti"><i class="fab fa-linkedin-in fa-2x"></i></a>
+              <a href="https://www.instagram.com/ieeevjti/"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="ieeevjtiofficial@gmail.com"><i class="fas fa-envelope-square fa-2x"></i></a>
+              <a href="https://www.youtube.com/channel/UCXkEZSsh_RWiBfrJIPY27vg"><i class="fab fa-youtube fa-2x"></i></a>
+              <p><a href="https://issuu.com/ieeevjti">Issuu</a>
+                <br>
+                <a href="https://linktr.ee/ieeevjti">LinkTree</a>
+              </p>
+              
+         
+          </div>
+          
+      </div>
+      <hr class="horizontal_line">
+      <p class="text-center">Copyright &copy;IEEE VJTI 2021 </p>
+      
+
+  </footer>
+</section>
+
+    <!-- <div style="height: 400px"></div> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 
-  <!-- Bootstrap Stuff  -->
-
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+  
 </html>
